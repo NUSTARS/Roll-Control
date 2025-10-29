@@ -5,7 +5,7 @@ from scipy.signal import savgol_filter
 from scipy.fft import fft, fftfreq, rfft, rfftfreq
 
 # --- Load CSV data ---
-df = pd.read_csv('C:\\Users\\maxhu\\Documents\\VS_Code\\Roll-Control\\Plotting\\FT1_primary.csv')
+df = pd.read_csv('Plotting\Data\FT1_primary.csv')
 df = df.set_index('time')
 df = df[~df.index.duplicated(keep='first')]
 
