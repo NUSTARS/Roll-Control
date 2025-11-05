@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from PIL.Image import Image
 
 class Stage(ABC):
 
@@ -7,11 +8,11 @@ class Stage(ABC):
         pass
 
     @abstractmethod
-    def close(self, arg1):
+    def close(self):
         pass
 
     @abstractmethod
-    def operate(self, arg1):
+    def process(self, image : Image) -> Image:
         pass
 
     
