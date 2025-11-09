@@ -15,11 +15,16 @@ df = df.reindex(df.index.union(t_new)).interpolate('index').loc[t_new]
 df = df.reset_index()
 
 
-# --- Basic plot ---
-df_main = df[df['time'] > 70]
+# # --- Basic plot ---
+# df_main = df[df['time'] > 70]
+# time = df_main['time']
+# roll = df_main['gyro_roll']
 
+# --- only main plot ---
+df_main = df[df['state'] == 7]
 time = df_main['time']
 roll = df_main['gyro_roll']
+
 
 print(time)
 
